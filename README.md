@@ -123,33 +123,25 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 - **Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
 
-- **Evaluation Metric:** Accuracy is a metric used to measure the proportion of correctly predicted outcomes by a model compared to the total number of instances evaluated. We used accuracy as it provides a straightforward measure of overall model performance, crucial for assessing its effectiveness in predicting market movements.
+- **Evaluation Metric 1:** Accuracy.
+  - Accuracy is a metric used to measure the proportion of correctly predicted outcomes by a model compared to the total number of instances evaluated. We used accuracy as it provides         a straightforward measure of overall model performance, crucial for assessing its effectiveness in predicting market movements. Since the goal of the project was to earn as much           as possible, we decide to exclude from the evalutation the times the models predict 0.
+
+- **Evaluation Metric 2:** Confusion matrix.
+  - It is a table that summarizes the performance of a model by presenting the counts of true positive, true negative, false positive, and false negative predictions, allowing for a           detailed analysis of the model's accuracy and error rates. We utilized the confusion matrix in addition to the accuracy to gain insights into the model's behaviour to wrongly (FP and      FN) classify instances and to identify specific areas for improvement in its predictive capabilities for different stocks and indices.
+
+- **Evaluation Metric 3:** Receiver Operating Characteristic (ROC) curve
+  - It is a graphical representation that illustrates the performance of a classification model across various thresholds. It plots the true positive rate (sensitivity) against the false      positive rate (1 - specificity) for different threshold values, providing insight into the model's ability to discriminate between classes and helping to determine the optimal             threshold for classification tasks. We used the ROC curve to assess the model's discriminatory power and its suitability for distinguishing between market movements, aiding in fine-       tuning its threshold for decision-making.
+
+- **Evaluation Metric 4:**  Classification report.
+  - It is a comprehensive summary of the performance of a classification model. It includes metrics such as precision, recall, F1-score. Precision measures the proportion of true positive     predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives. The F1-score is the harmonic mean of              precision and recall, providing a balanced measure of a model's performance. The classification report offers detailed insights into the model's performance for individual classes,        aiding in understanding its strengths and weaknesses across different categories. The classification report facilitates a detailed analysis of the model's strengths and weaknesses         across different categories, guiding improvements in its predictive capabilities for various stocks and indices.
 
 ### Experiment 2
 
-- **Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
-
-- **Evaluation Metrics:** Confusion matrix is a table that summarizes the performance of a model by presenting the counts of true positive, true negative, false positive, and false negative predictions, allowing for a detailed analysis of the model's accuracy and error rates. We utilized the confusion matrix to gain insights into the model's ability to correctly classify instances and to identify specific areas for improvement in its predictive capabilities for different stocks and indices.
-
-### Experiment 3
-
-- **Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
-
-- **Evaluation Metrics:** The Receiver Operating Characteristic (ROC) curve is a graphical representation that illustrates the performance of a classification model across various thresholds. It plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) for different threshold values, providing insight into the model's ability to discriminate between classes and helping to determine the optimal threshold for classification tasks. We used the ROC curve to assess the model's discriminatory power and its suitability for distinguishing between market movements, aiding in fine-tuning its threshold for decision-making.
-
-### Experiment 4
-
-- **Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
-
-- **Evaluation Metrics:**  A classification report is a comprehensive summary of the performance of a classification model. It includes metrics such as precision, recall, F1-score. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives. The F1-score is the harmonic mean of precision and recall, providing a balanced measure of a model's performance. The classification report offers detailed insights into the model's performance for individual classes, aiding in understanding its strengths and weaknesses across different categories. The classification report facilitates a detailed analysis of the model's strengths and weaknesses across different categories, guiding improvements in its predictive capabilities for various stocks and indices.
-
-### Experiment 5
-
 - **Main Purpose:** To benchmark the performance of the proposed models against a baseline model that predicts only 1.
 
-- **Baseline:** The baseline model predicts a constant outcome for all instances.
+- **Baseline:** The baseline model predicts a constant outcome equal to 1 for all instances.
 
-- **Evaluation Metrics:** Accuracy; This metrics assess the proposed model's performance in comparison to the baseline model.
+- **Evaluation Metric:** Same metrics as previous experiment. 
 
 ## [Section 4] Results
 
