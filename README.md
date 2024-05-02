@@ -59,34 +59,60 @@ Several indicators were computed for use in the models as predictors:
 
 Finally, we standardized the data and used a 90-10 split for training and testing.
 
-#### Models
+### Models
 
-The first model is **ARIMA**, the only regression model used. This model uses the close price as its sole predictor to forecast the next occurrence. 
+#### ARIMA
+The first model is ARIMA, the only regression model used. This model uses the close price as its sole predictor to forecast the next occurrence.
 
-To choose its parameters, we use an automated tool:
+To choose its parameters, an automated tool its used:
 - The `auto.arima()` function selects the best `p`, `d`, and `q` parameters based on AIC/BIC values.
 
-Once the ARIMA model's prediction is made, we define the trading strategy:
-- If the prediction of the next close is greater than the previous close, we go long.
-- If not, we go short.
-- A third option, "flat," is set by a threshold:
-  - This threshold determines how close the predicted price must be to the previous close to consider the action as flat.
-  - It's computed as a percentage of the previous price.
+Once the ARIMA model's prediction is made, trading strategy is defined in this way:
+- If the prediction of the next close is greater than the previous close by a certain threshold, we go long.
+- If the prediction of the next close is smaller than the previous close by a certain threshold, we go short.
+- If it remains on the threshold interval we exit the market because we are not confident to make a trading choice.
 
-The second model is **LSTM**:
-- This takes a window of 60 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
-- The LSTM structure:
-  - `model.add(LSTM(units = 10, return_sequences = True, input_shape=(X_train_data.shape[1], X_train_data.shape[2])))`
-  - `model.add(LSTM(units = 5, return_sequences = False))`
-  - `model.add(Dense(64, activation='relu'))`
-  - `model.add(Dense(32, activation='relu'))`
-  - `model.add(Dense(num_classes, activation='softmax'))`
+#### LSTM 
+
+The second model is LSTM:
+- This model takes a window of 60 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
+- The LSTM consists of two layers:
+  - A recurrent layer with 10 units followed by another recurrent layer with 5 units, to process sequential data.
+  - Dense layers of 64 and 32 units that apply a nonlinear transformation, refining the output.
+  - A final output layer that produces a prediction based on a softmax activation, outputting probabilities for -1, 0, or 1.
 
 - Compilation details:
-  - `model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])`
-  - `model.fit(X_train_data, y_train_data, epochs=20, batch_size=64, validation_split=0.2)`
+  - The model is optimized using the Adam optimizer, balancing learning rate and convergence speed.
+  - Categorical cross-entropy is used as the loss function, as it handles multi-class classification well.
+  - Training includes metrics for accuracy tracking.
 
 - A basic, small structure was chosen:
   - A larger structure offered no advantage.
   - Few epochs were used to train the model to avoid overfitting, as it stops learning beyond this point.
 
+#### SVM
+
+The SVM model takes a window of 40 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
+
+The model's parameters were chosen based on a grid search for each of our stocks and indices, ensuring the best-performing models for each case. The grid search explored various combinations of parameters, including:
+
+- **Kernel:** Different types of kernels (linear, rbf, poly, and sigmoid) to find the best decision boundary for classification.
+- **C:** A range of regularization values to balance bias and variance.
+- **Degree:** For polynomial kernels, to determine the complexity of the decision boundary.
+- **Gamma:** For rbf and poly kernels, to set the scale for the input features.
+
+After training, the SVM classifies new inputs based on the selected kernel and learned boundaries, directly predicting the trading signal.
+
+#### Random Forest
+
+The Random Forest model is an ensemble model that takes as input the different models (ARIMA, LSTM, and SVM) and outputs a trading choice based on their combined predictions. The idea is to gather the opinion of different "traders" (represented by our models) and make a decision by listening to all of them.
+
+The model's parameters were chosen based on a grid search, exploring various combinations, including:
+
+- **n_estimators:** The number of trees in the forest, tested with values of 30, 50, and 100.
+- **max_depth:** The maximum depth of each tree, explored with values of 10, 20, and None.
+- **min_samples_split:** The minimum number of samples required to split a node, tested with values of 2, 5, and 10.
+- **min_samples_leaf:** The minimum number of samples required in a leaf node, explored with values of 1, 5, and 10.
+- **max_features:** The number of features to consider for splitting a node, tested with 'sqrt' and None.
+
+After the grid search, the best-performing model is chosen, combining the predictions from all models to classify the trading signal directly.
