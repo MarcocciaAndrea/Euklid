@@ -92,7 +92,7 @@ The second model is LSTM:
 
 #### SVM
 
-The SVM model takes a window of 40 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
+The SVM model takes a window of 10 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
 
 The model's parameters were chosen based on a grid search for each of our stocks and indices, ensuring the best-performing models for each case. The grid search explored various combinations of parameters, including:
 
