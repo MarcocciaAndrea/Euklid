@@ -155,9 +155,9 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 ### Results of ARIMA, LSTM AND SVM
 
--Considering the evaluation metrics and all the previous insights, we can assess that the accuracy is around the 50% for the three models. Therefore, the prediction of our models is not perfect, but we should have expected this as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
+- Considering the evaluation metrics and all the previous insights, we can assess that the accuracy is around the 50% for the three models. Therefore, the prediction of our models is not perfect, but we should have expected this as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
 
--The images reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively. 
+- The images reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively. 
 
 ### Random forest
 
