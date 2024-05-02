@@ -167,7 +167,7 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 - Going forward we compare our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
 
-### Summarize
+### Summary
 
 These aspects bring us to the realization that achieving perfect predictions in financial markets is inherently challenging due to the multifaceted nature of market dynamics. While our models exhibit an accuracy of around 50%, which indicates their effectiveness to some extent, it's crucial to acknowledge the limitations imposed by the complexity and unpredictability of market behavior. Despite the combination of results with a random forest model, it is evident that a holistic approach incorporating other factors in addition to price data is required to obtain more accurate forecasts.
 
