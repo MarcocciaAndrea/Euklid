@@ -173,11 +173,11 @@ These aspects bring us to the realization that achieving perfect predictions in 
 
 ## [Section 5] Conclusions
 
-Overall, we anticipated that achieving perfect models capable of accurately predicting the complexities of the stock market would be challenging, given the myriad variables influencing it. Beyond market volatility, which already poses a significant challenge, factors such as economic, political, social, and psychological elements are not inherently captured by models relying solely on financial data.
+- Overall, we anticipated that achieving perfect models capable of accurately predicting the complexities of the stock market would be challenging, given the myriad variables influencing it. Beyond market volatility, which already poses a significant challenge, factors such as economic, political, social, and psychological elements are not inherently captured by models relying solely on financial data.
 
-However, achieving a 50% prediction accuracy is a notable accomplishment, providing a solid foundation for further model refinement aimed at achieving more precise market trend forecasts. Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that illuminate market context and intrinsic characteristics, which are often obscured by price data alone.
+- However, achieving a 50% prediction accuracy is a notable accomplishment, providing a solid foundation for further model refinement aimed at achieving more precise market trend forecasts. Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that illuminate market context and intrinsic characteristics, which are often obscured by price data alone.
 
-While it remains uncertain whether these models can attain high accuracy levels, they hold the potential to achieve a level of reliability that shareholders can depend on for forecasting market trends.
+- While it remains uncertain whether these models can attain high accuracy levels, they hold the potential to achieve a level of reliability that shareholders can depend on for forecasting market trends.
 
 
 
