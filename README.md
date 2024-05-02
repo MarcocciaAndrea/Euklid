@@ -147,17 +147,17 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 ### Results of ARIMA, LSTM AND SVM
 
-- Considering the evaluation metrics and all the previous insights, we can assess that the accuracy is around the 50% for the three models. Therefore, the prediction of our models is not perfect, but we should have expected this as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
+- Considering the evaluation metrics and all the previous insights, we can assess that the accuracy is around the 50% for the three models.Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the three models. Therefore, the prediction of our models is not perfect, but we should have expected this, given the unpredictability of the prediction environment and the lack of sufficient metrics for a comprehensive evaluation of the subject. Indeed, as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
 
-- The images reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively. 
+- The results reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively. 
 
 ### Random forest
 
-- After analysing each model, we merge the results with a random forest that takes in input the trading signal of the three models and returns the final decision strategy. As we can see from the image the accuracy is around 50% like for every single model. 
+- After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50% like for every single model. 
 
 ### Benchmarking
 
-- Going forward we compare our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
+- Going forward we compared our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
 
 ### Summary
 
@@ -167,9 +167,9 @@ These aspects bring us to the realization that achieving perfect predictions in 
 
 - Overall, we anticipated that achieving perfect models capable of accurately predicting the complexities of the stock market would be challenging, given the myriad variables influencing it. Beyond market volatility, which already poses a significant challenge, factors such as economic, political, social, and psychological elements are not inherently captured by models relying solely on financial data.
 
-- However, achieving a 50% prediction accuracy is a notable accomplishment, providing a solid foundation for further model refinement aimed at achieving more precise market trend forecasts. Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that illuminate market context and intrinsic characteristics, which are often obscured by price data alone.
+- Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that highlight market context and intrinsic characteristics, which are often obscured by price data alone.
 
-- While it remains uncertain whether these models can attain high accuracy levels, they hold the potential to achieve a level of reliability that shareholders can depend on for forecasting market trends.
+- To conclued, the concept of the caotic system in the context of the stock market becomes relevant given the unpredictability of market dynamics. Even having a model that would predict perfectly the market, in a long-range distance the accuracy wuold back to medrioce values.
 
 
 
