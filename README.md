@@ -121,35 +121,35 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 ### Experiment 1
 
-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
+-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
 
-**Evaluation Metric:** Accuracy is a metric used to measure the proportion of correctly predicted outcomes by a model compared to the total number of instances evaluated. We used accuracy as it provides a straightforward measure of overall model performance, crucial for assessing its effectiveness in predicting market movements.
+-**Evaluation Metric:** Accuracy is a metric used to measure the proportion of correctly predicted outcomes by a model compared to the total number of instances evaluated. We used accuracy as it provides a straightforward measure of overall model performance, crucial for assessing its effectiveness in predicting market movements.
 
 ### Experiment 2
 
-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
+-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
 
-**Evaluation Metrics:** Confusion matrix is a table that summarizes the performance of a model by presenting the counts of true positive, true negative, false positive, and false negative predictions, allowing for a detailed analysis of the model's accuracy and error rates. We utilized the confusion matrix to gain insights into the model's ability to correctly classify instances and to identify specific areas for improvement in its predictive capabilities for different stocks and indices.
+-**Evaluation Metrics:** Confusion matrix is a table that summarizes the performance of a model by presenting the counts of true positive, true negative, false positive, and false negative predictions, allowing for a detailed analysis of the model's accuracy and error rates. We utilized the confusion matrix to gain insights into the model's ability to correctly classify instances and to identify specific areas for improvement in its predictive capabilities for different stocks and indices.
 
 ### Experiment 3
 
-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
+-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
 
-**Evaluation Metrics:** The Receiver Operating Characteristic (ROC) curve is a graphical representation that illustrates the performance of a classification model across various thresholds. It plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) for different threshold values, providing insight into the model's ability to discriminate between classes and helping to determine the optimal threshold for classification tasks. We used the ROC curve to assess the model's discriminatory power and its suitability for distinguishing between market movements, aiding in fine-tuning its threshold for decision-making.
+-**Evaluation Metrics:** The Receiver Operating Characteristic (ROC) curve is a graphical representation that illustrates the performance of a classification model across various thresholds. It plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) for different threshold values, providing insight into the model's ability to discriminate between classes and helping to determine the optimal threshold for classification tasks. We used the ROC curve to assess the model's discriminatory power and its suitability for distinguishing between market movements, aiding in fine-tuning its threshold for decision-making.
 
 ### Experiment 4
 
-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
+-**Main Purpose:** To evaluate the proposed model's performance on the different indices and stocks.
 
-**Evaluation Metrics:**  A classification report is a comprehensive summary of the performance of a classification model. It includes metrics such as precision, recall, F1-score. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives. The F1-score is the harmonic mean of precision and recall, providing a balanced measure of a model's performance. The classification report offers detailed insights into the model's performance for individual classes, aiding in understanding its strengths and weaknesses across different categories. The classification report facilitates a detailed analysis of the model's strengths and weaknesses across different categories, guiding improvements in its predictive capabilities for various stocks and indices.
+-**Evaluation Metrics:**  A classification report is a comprehensive summary of the performance of a classification model. It includes metrics such as precision, recall, F1-score. Precision measures the proportion of true positive predictions among all positive predictions, while recall measures the proportion of true positive predictions among all actual positives. The F1-score is the harmonic mean of precision and recall, providing a balanced measure of a model's performance. The classification report offers detailed insights into the model's performance for individual classes, aiding in understanding its strengths and weaknesses across different categories. The classification report facilitates a detailed analysis of the model's strengths and weaknesses across different categories, guiding improvements in its predictive capabilities for various stocks and indices.
 
 ### Experiment 5
 
-**Main Purpose:** To benchmark the performance of the proposed models against a baseline model that predicts only 1.
+-**Main Purpose:** To benchmark the performance of the proposed models against a baseline model that predicts only 1.
 
-**Baseline:** The baseline model predicts a constant outcome for all instances.
+-**Baseline:** The baseline model predicts a constant outcome for all instances.
 
-**Evaluation Metrics:** Accuracy; This metrics assess the proposed model's performance in comparison to the baseline model.
+-**Evaluation Metrics:** Accuracy; This metrics assess the proposed model's performance in comparison to the baseline model.
 
 ## [Section 4] Results
 
@@ -161,23 +161,23 @@ The images reveal that the accuracy varies for the different indices and stocks 
 
 ### Random forest
 
-After analysing each model, we merge the results with a random forest that takes in input the trading signal of the three models and returns the final decision strategy. As we can see from the image the accuracy is around 50% like for every single model. 
+-After analysing each model, we merge the results with a random forest that takes in input the trading signal of the three models and returns the final decision strategy. As we can see from the image the accuracy is around 50% like for every single model. 
 
 ### Benchmarking
 
-Going forward we compare our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
+-Going forward we compare our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
 
 ### Summarize
 
-These aspects bring us to the realization that achieving perfect predictions in financial markets is inherently challenging due to the multifaceted nature of market dynamics. While our models exhibit an accuracy of around 50%, which indicates their effectiveness to some extent, it's crucial to acknowledge the limitations imposed by the complexity and unpredictability of market behavior. Despite the combination of results with a random forest model, it is evident that a holistic approach incorporating other factors in addition to price data is required to obtain more accurate forecasts.
+-These aspects bring us to the realization that achieving perfect predictions in financial markets is inherently challenging due to the multifaceted nature of market dynamics. While our models exhibit an accuracy of around 50%, which indicates their effectiveness to some extent, it's crucial to acknowledge the limitations imposed by the complexity and unpredictability of market behavior. Despite the combination of results with a random forest model, it is evident that a holistic approach incorporating other factors in addition to price data is required to obtain more accurate forecasts.
 
 ## [Section 5] Conclusions
 
-Overall, we anticipated that achieving perfect models capable of accurately predicting the complexities of the stock market would be challenging, given the myriad variables influencing it. Beyond market volatility, which already poses a significant challenge, factors such as economic, political, social, and psychological elements are not inherently captured by models relying solely on financial data.
+-Overall, we anticipated that achieving perfect models capable of accurately predicting the complexities of the stock market would be challenging, given the myriad variables influencing it. Beyond market volatility, which already poses a significant challenge, factors such as economic, political, social, and psychological elements are not inherently captured by models relying solely on financial data.
 
-However, achieving a 50% prediction accuracy is a notable accomplishment, providing a solid foundation for further model refinement aimed at achieving more precise market trend forecasts. Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that illuminate market context and intrinsic characteristics, which are often obscured by price data alone.
+-However, achieving a 50% prediction accuracy is a notable accomplishment, providing a solid foundation for further model refinement aimed at achieving more precise market trend forecasts. Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that illuminate market context and intrinsic characteristics, which are often obscured by price data alone.
 
-While it remains uncertain whether these models can attain high accuracy levels, they hold the potential to achieve a level of reliability that shareholders can depend on for forecasting market trends.
+-While it remains uncertain whether these models can attain high accuracy levels, they hold the potential to achieve a level of reliability that shareholders can depend on for forecasting market trends.
 
 
 
