@@ -32,7 +32,10 @@ Indices had missing records for 2 weeks, which we handled through imputation:
 
 The second issue addressed in pre-processing is **stock splits**. While IBM and Microsoft data were already adjusted for stock splits, Amazon's data did not account for a recent split, which was corrected.
 
-[Two pictures can be placed here side by side.]
+<p align="center">
+   <img src="./images/splits_amazon1.png" width="45%" />
+   <img src="./images/splits_amazon2.png" width="45%" />
+</p>
 
 #### Additional Columns for Model Training and Evaluation
 
@@ -55,3 +58,35 @@ Several indicators were computed for use in the models as predictors:
   - H = 0.5: Future price movements are completely independent of past movements.
 
 Finally, we standardized the data and used a 90-10 split for training and testing.
+
+#### Models
+
+The first model is **ARIMA**, the only regression model used. This model uses the close price as its sole predictor to forecast the next occurrence. 
+
+To choose its parameters, we use an automated tool:
+- The `auto.arima()` function selects the best `p`, `d`, and `q` parameters based on AIC/BIC values.
+
+Once the ARIMA model's prediction is made, we define the trading strategy:
+- If the prediction of the next close is greater than the previous close, we go long.
+- If not, we go short.
+- A third option, "flat," is set by a threshold:
+  - This threshold determines how close the predicted price must be to the previous close to consider the action as flat.
+  - It's computed as a percentage of the previous price.
+
+The second model is **LSTM**:
+- This takes a window of 60 weeks of data about prices, indicators, volume, etc., and directly predicts the trading choice as -1, 0, or 1.
+- The LSTM structure:
+  - `model.add(LSTM(units = 10, return_sequences = True, input_shape=(X_train_data.shape[1], X_train_data.shape[2])))`
+  - `model.add(LSTM(units = 5, return_sequences = False))`
+  - `model.add(Dense(64, activation='relu'))`
+  - `model.add(Dense(32, activation='relu'))`
+  - `model.add(Dense(num_classes, activation='softmax'))`
+
+- Compilation details:
+  - `model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])`
+  - `model.fit(X_train_data, y_train_data, epochs=20, batch_size=64, validation_split=0.2)`
+
+- A basic, small structure was chosen:
+  - A larger structure offered no advantage.
+  - Few epochs were used to train the model to avoid overfitting, as it stops learning beyond this point.
+
