@@ -171,9 +171,32 @@ but we should have expected this, given the unpredictability of the prediction e
 ### LSTM
 
 - The results reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively.
+- 
 ### SVM
 
+The SVM model demonstrates a slight improvement over previously tested models, achieving consistent accuracy levels around 55% across various stocks, with the exception of IBM. This suggests a marginal but notable enhancement in the model's learning capability.
+- Amazon: 0.58
+- CAC: 0.41
+- IBM: 0.54
+- Microsoft:0.57
+- SP500: 0.55
+- Nasdaq: 0.54
 
+The Receiver Operating Characteristic (ROC) curves provide a visual assessment of our models' capability to correctly identify profitable trading opportunities. These curves illustrate the trade-off between sensitivity and specificity for three example stocks.
+
+<p align="center">
+   <img src="./images/Amazon ROC SVM.png" width="30%" height=250 />
+   <img src="./images/IBM ROC SVM.png" width="30%" height=250 />
+   <img src="./images/Microsoft ROC SVM.png" width="30%" height=250 />
+</p>
+
+The confusion matrices offer deeper insights into the predictive behavior of our models on a more granular level. For instance, the model has shown conservative behavior in market entry decisions for IBM - entering the market only 13 times, slightly less conservative for Amazon, and considerably aggressive for Microsoft. 
+
+<p align="center">
+   <img src="./images/cm_amazon_svm.png" width="30%" height=250 />
+   <img src="./images/cm_ibm_svm.png" width="30%" height=250 />
+   <img src="./images/cm_microsoft_svm.png" width="30%" height=250 />
+</p>
 
 ### Random forest
 
