@@ -56,6 +56,7 @@ Several indicators were computed for use in the models as predictors:
 - **Hurst Coefficient:** Indicates the behavior of time series:
   - H < 0.5: Tends to revert to a mean, suggesting that increases will likely be followed by decreases and vice versa.
   - H = 0.5: Future price movements are completely independent of past movements.
+  - H > 0.5: The series that tends to follow a trend. This means that increases will likely follow increases, and decreases will likely follow decreases.
 
 Finally, we standardized the data and used a 90-10 split for training and testing.
 
