@@ -176,7 +176,7 @@ Taking the two confusion matrices of Amazon and CAC as an example, we can underl
 
 ### LSTM
 
-The LSTM model does not show to be very effective, it gives a notable accuracy for IBM but it's around 0.5 for the other stocks.
+The LSTM model gives a notable accuracy for IBM but it's around 0.50 for the other stocks.
 - **Amazon accuracy**: 0.51
 - **CAC accuracy**: 0.52
 - **IBM accuracy**: 0.74
@@ -204,7 +204,7 @@ The more conservative strategy had for IBM paid off giving the best results.
 
 ### SVM
 
-The SVM model demonstrates a slight improvement over previously tested models, achieving consistent accuracy levels around 55% across various stocks, with the exception of IBM. This suggests a marginal but notable enhancement in the model's learning capability.
+The SVM model demonstrates a slight improvement over previously tested models, achieving consistent accuracy levels around 53% across various stocks, with the exception of IBM. This suggests a marginal but notable enhancement in the model's learning capability.
 - **Amazon accuracy**: 0.58
 - **CAC accuracy**: 0.41
 - **IBM accuracy**: 0.54
@@ -232,7 +232,7 @@ The model has opted for going long most of the time for Amazon and IBM, while in
 
 ### Random forest
 
-After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM and SVM.  From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to the previous models. 
+After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM and SVM. From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to the previous models. 
 - **Amazon accuracy**: 0.52
 - **CAC accuracy**: 0.49
 - **IBM accuracy**: 0.52
