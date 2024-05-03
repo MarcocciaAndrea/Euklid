@@ -232,7 +232,7 @@ The model has opted for going long most of the time for Amazon and IBM, while in
 
 ### Random forest
 
-After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM.  From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to one of the previous models. 
+After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM and SVM.  From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to one of the previous models. 
 - **Amazon accuracy**: 0.52
 - **CAC accuracy**: 0.49
 - **IBM accuracy**: 0.52
