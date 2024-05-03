@@ -18,6 +18,12 @@ The datasets include 3 indices and 3 stocks: S&P500, Nasdaq, CAC, Microsoft, IBM
 
 #### Missing Values
 
+<p align="center">
+   <img src="./images/cac_missing_values.png" width="30%" height=100 />
+   <img src="./images/sp_missing_values.png" width="30%" height=100 />
+   <img src="./images/nasdaq_missing_values.png" width="30%" height=100 />
+</p>
+
 Indices had missing records for 2 weeks, which we handled through imputation:
 
 - **Open price** is typically equal to or similar to the close price of the previous week:
