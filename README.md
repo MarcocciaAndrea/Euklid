@@ -154,7 +154,7 @@ After the grid search, the best-performing model is chosen, combining the predic
 
 ### ARIMA
 
-Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model.
+Considering the evaluation metrics and all the previous insights, we can estimate that the average accuracy is around 50% for the ARIMA model.
 - **Amazon accuracy**: 0.52
 - **CAC accuracy**: 0.50
 - **IBM accuracy**: 0.52
@@ -226,11 +226,23 @@ The model has opted for going long most of the time for Amazon and IBM, while in
 
 ### Random forest
 
-- After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50% like for every single model. 
+- After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM.  From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to one of the previous models. 
+- **Amazon accuracy**: 0.52
+- **CAC accuracy**: 0.49
+- **IBM accuracy**: 0.52
+- **Microsoft accuracy**:0.48
+- **SP500 accuracy**: 0.52
+- **Nasdaq accuracy**: 0.52
 
 ### Benchmarking
 
-- Going forward we compared our results to a model that predicts only 1, so when the market goes up. As we can see from the image the accuracy is over 50% for every index and stock, so better than the result of random forest in mean.
+- Going forward we compared our results to a model that predicts only 1, so when the market goes long. As can be seen from the image, the accuracy is over 50% for each index and stock, emphasising the consistency of the results, thus producing a better result than the random forest on average.
+- **Amazon accuracy**: 0.51
+- **CAC accuracy**: 0.56
+- **IBM accuracy**: 0.54
+- **Microsoft accuracy**:0.55
+- **SP500 accuracy**: 0.55
+- **Nasdaq accuracy**: 0.54
 
 ### Summary
 
@@ -242,7 +254,7 @@ These aspects bring us to the realization that achieving perfect predictions in 
 
 - Looking ahead, enhancing these models involves deepening their understanding of the stock market, encompassing both dynamic and financial perspectives. This expansion enables the models to forecast based on critical insights that highlight market context and intrinsic characteristics, which are often obscured by price data alone.
 
-- To conclued, the concept of the caotic system in the context of the stock market becomes relevant given the unpredictability of market dynamics. Even having a model that would predict perfectly the market, in a long-range distance the accuracy wuold back to medrioce values.
+- To conclude, the concept of the caotic system in the context of the stock market becomes relevant given the unpredictability of market dynamics. Even having a model that would predict perfectly the market, in a long-range distance the accuracy wuold back to medrioce values.
 
 
 
