@@ -1,6 +1,6 @@
 # EUKLID AI Systematic Trading Challenge
 
-**Team Members:** Andrea Marcoccia, Leonardo Pulicati, Francesco Del Treste
+**Team Members:** Andrea Marcoccia 775451, Leonardo Pulicati 786931, Francesco Del Treste 783351
 
 ## [Section 1] Introduction
 
