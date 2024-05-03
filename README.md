@@ -40,7 +40,7 @@ The second issue addressed in pre-processing is **stock splits**. While IBM and 
 
 <p align="center">
    <img src="./images/splits_amazon1.png" width="45%" />
-   <img src="./images/splits_amazon2.png" width="45%" />
+   <img src="./images/amazon_split.png" width="45%" />
 </p>
 
 #### Additional Columns for Model Training and Evaluation
