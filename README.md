@@ -157,8 +157,8 @@ but we should have expected this, given the unpredictability of the prediction e
 - Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model. Therefore, the prediction of this model is not perfect, but we should have expected this, given the unpredictability of the prediction environment.
 - Taking the two confusion matrices of Amazon and CAC as an example, we can underline that for amazon the model predicts 54% of true positives (when the market goes up) and 49% true negatives (when the market goes down) , while for the CAC index it predicts 60% true positives and 41% true negatives. After seeing all the confusion matrices of indices and stocks, we can deduce that the arima model more accurately predicts when the market goes long than when it goes short.
 <p align="center">
-   <img src="./images/Amazon ARIMA Confusion matrix.png" width = 45% height = 100/>
-   <img src="./images/CAC ARIMA Confusion Matrix.png" width = 45% height = 100/> 
+   <img src="./images/Amazon ARIMA Confusion matrix.png" width = 45% height = 300/>
+   <img src="./images/CAC ARIMA Confusion Matrix.png" width = 45% height = 300/> 
 </p>
 
 ### LSTM
