@@ -154,7 +154,7 @@ After the grid search, the best-performing model is chosen, combining the predic
 but we should have expected this, given the unpredictability of the prediction environment and the lack of sufficient metrics for a comprehensive evaluation of the subject. Indeed, as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
 ### ARIMA
 
-- Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model. Therefore, the prediction of this model is not perfect, but we should have expected this, given the unpredictability of the prediction environment. Taking the two confusion matrices of Amazon and CAC as an example, we can underline that for amazon the model predicts 54% of true positives (when the market goes up) and 49% true negatives (when the market goes down) , while for the cac index it predicts 60% true positives and 41% true negatives.
+- Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model. Therefore, the prediction of this model is not perfect, but we should have expected this, given the unpredictability of the prediction environment. Taking the two confusion matrices of Amazon and CAC as an example, we can underline that for amazon the model predicts 54% of true positives (when the market goes up) and 49% true negatives (when the market goes down) , while for the CAC index it predicts 60% true positives and 41% true negatives.
 
 ### LSTM
 
