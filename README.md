@@ -192,7 +192,7 @@ The Receiver Operating Characteristic (ROC) curve is a graphical representation 
    <img src="./images/nasdaq_roc_lstm.png" width="30%" height=250 />
 </p>
 
-The confusion matrices offer deeper insights into the predictive behavior of our models on a more granular level. The model has shown a conservative behavior in market entry decisions for IBM - entering the market only 19 times, slightly less conservative for Amazon, and considerably aggressive for Nasdaq. 
+The confusion matrices offer deeper insights into the predictive behavior of our models on a more granular level. For instance, the model has shown a conservative behavior in market entry decisions for IBM - entering the market only 19 times, slightly less conservative for Amazon, and considerably aggressive for Nasdaq. 
 
 <p align="center">
    <img src="./images/cm_amazon_lstm.png" width="30%" height=250 />
