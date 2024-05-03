@@ -176,7 +176,7 @@ Taking the two confusion matrices of Amazon and CAC as an example, we can underl
 
 ### LSTM
 
-The LSTM model does not show to be very effective, it gives a notable accuracy for IBM but its around 0.5 for the other stocks.
+The LSTM model does not show to be very effective, it gives a notable accuracy for IBM but it's around 0.5 for the other stocks.
 - **Amazon accuracy**: 0.51
 - **CAC accuracy**: 0.52
 - **IBM accuracy**: 0.74
