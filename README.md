@@ -39,8 +39,8 @@ Indices had missing records for 2 weeks, which we handled through imputation:
 The second issue addressed in pre-processing is **stock splits**. While IBM and Microsoft data were already adjusted for stock splits, Amazon's data did not account for a recent split, which was corrected.
 
 <p align="center">
-   <img src="./images/splits_amazon1.png" width="45%" />
-   <img src="./images/amazon_split.png" width="45%" />
+   <img src="./images/splits_amazon1.png" width = 800/>
+   <img src="./images/amazon_split.png"  />
 </p>
 
 #### Additional Columns for Model Training and Evaluation
