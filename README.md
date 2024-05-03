@@ -231,22 +231,22 @@ The model has opted for going long most of the time for Amazon and IBM, while in
 ### Random forest
 
 - After analysing each model, we merged the results with a Random Forest which takes in input the trading signal of the three models and returns the final decision strategy. Also in this case, the results tell us that the accuracy is around 50%, so, for example, less than the average accuracy of LSTM.  From the combination of the results of the different models we might have expected better results, but this is not reflected in the even worse accuracy compared to one of the previous models. 
- - **Amazon accuracy**: 0.52
- - **CAC accuracy**: 0.49
- - **IBM accuracy**: 0.52
- - **Microsoft accuracy**:0.48
- - **SP500 accuracy**: 0.52
- - **Nasdaq accuracy**: 0.52
+   - **Amazon accuracy**: 0.52
+   - **CAC accuracy**: 0.49
+   - **IBM accuracy**: 0.52
+   - **Microsoft accuracy**:0.48
+   - **SP500 accuracy**: 0.52
+   - **Nasdaq accuracy**: 0.52
 
 ### Benchmarking
 
 - Going forward we compared our results to a model that predicts only 1, so when the market goes long. As can be seen from the image, the accuracy is over 50% for each index and stock, emphasising the consistency of the results, thus producing a better result than the random forest on average.
- - **Amazon accuracy**: 0.51
- - **CAC accuracy**: 0.56
- - **IBM accuracy**: 0.54
- - **Microsoft accuracy**:0.55
- - **SP500 accuracy**: 0.55
- - **Nasdaq accuracy**: 0.54
+   - **Amazon accuracy**: 0.51
+   - **CAC accuracy**: 0.56
+   - **IBM accuracy**: 0.54
+   - **Microsoft accuracy**:0.55
+   - **SP500 accuracy**: 0.55
+   - **Nasdaq accuracy**: 0.54
 
 ### Summary
 
