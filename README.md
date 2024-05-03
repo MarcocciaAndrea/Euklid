@@ -184,7 +184,7 @@ The LSTM model does not show to be very effective, it gives a notable accuracy f
 - **SP500 accuracy**: 0.45
 - **Nasdaq accuracy**: 0.53
 
-The Receiver Operating Characteristic (ROC) curves provide a visual assessment of our models' capability to correctly identify profitable trading opportunities. These curves illustrate the trade-off between sensitivity and specificity for three example stocks.
+The Receiver Operating Characteristic (ROC) curve is a graphical representation that illustrates the performance of a binary classification model across various threshold settings. These curves illustrate the trade-off between sensitivity and specificity for three example stocks.
 
 <p align="center">
    <img src="./images/amazon_roc_lstm.png" width="30%" height=250 />
@@ -212,7 +212,7 @@ The SVM model demonstrates a slight improvement over previously tested models, a
 - **SP500 accuracy**: 0.55
 - **Nasdaq accuracy**: 0.54
 
-The Receiver Operating Characteristic (ROC) curves provide a visual assessment of our models' capability to correctly identify profitable trading opportunities. These curves illustrate the trade-off between sensitivity and specificity for three example stocks.
+These ROC curves illustrate the trade-off between sensitivity and specificity for three example stocks.
 
 <p align="center">
    <img src="./images/Amazon ROC SVM.png" width="30%" height=250 />
