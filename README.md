@@ -151,18 +151,18 @@ After the grid search, the best-performing model is chosen, combining the predic
 - **Evaluation Metric:** Same metrics as previous experiment. 
 
 ## [Section 4] Results
-but we should have expected this, given the unpredictability of the prediction environment and the lack of sufficient metrics for a comprehensive evaluation of the subject. Indeed, as it is difficult to find a model that predicts from prices the movement of a market that can be influenced by different and dynamic aspects.
+
 ### ARIMA
 
-- Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model.
-  - **Amazon accuracy**: 0.52
-  - **CAC accuracy**: 0.50
-  - **IBM accuracy**: 0.52
-  - **Microsoft accuracy**: 0.45
-  - **SP500 accuracy**: 0.52
-  - **Nasdaq accuracy**: 0.52
-- Therefore, the prediction of this model is not perfect, but we should have expected this, given the dinamicity and volatility of the market.
-- Taking the two confusion matrices of Amazon and CAC as an example, we can underline that for amazon the model predicts 54% of true positives (when the market goes long) and 49% true negatives (when the market goes short) , while for the CAC index it predicts 60% true positives and 41% true negatives. After seeing all the confusion matrices of indices and stocks, we can deduce that the arima model more accurately predicts when the market goes long than when it goes short.
+Considering the evaluation metrics and all the previous insights, we can estimate that the accuracy is around 50% for the ARIMA model.
+- **Amazon accuracy**: 0.52
+- **CAC accuracy**: 0.50
+- **IBM accuracy**: 0.52
+- **Microsoft accuracy**: 0.45
+- **SP500 accuracy**: 0.52
+- **Nasdaq accuracy**: 0.52
+ARIMA model shows to not be very good in predictions, this is pretty normal due to its high simplicity.
+Taking the two confusion matrices of Amazon and CAC as an example, we can underline that for amazon the model predicts 54% of true positives (when the market goes long) and 49% true negatives (when the market goes short) , while for the CAC index it predicts 60% true positives and 41% true negatives. After seeing all the confusion matrices of indices and stocks, we can deduce that the arima model more accurately predicts when the market goes long than when it goes short.
 <p align="center">
    <img src="./images/Amazon ARIMA Confusion matrix.png" width = 30% height = 250/>
    <img src="./images/CAC ARIMA Confusion Matrix.png" width = 30% height = 250/> 
@@ -170,8 +170,32 @@ but we should have expected this, given the unpredictability of the prediction e
 
 ### LSTM
 
-- The results reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively.
-- 
+The LSTM model does not show to be very effective, it gives a notable accuracy for IBM but its around 0.5 for the other stocks.
+- **Amazon accuracy**: 0.51
+- **CAC accuracy**: 0.52
+- **IBM accuracy**: 0.74
+- **Microsoft accuracy**:0.45
+- **SP500 accuracy**: 0.45
+- **Nasdaq accuracy**: 0.53
+
+The Receiver Operating Characteristic (ROC) curves provide a visual assessment of our models' capability to correctly identify profitable trading opportunities. These curves illustrate the trade-off between sensitivity and specificity for three example stocks.
+
+<p align="center">
+   <img src="./images/amazon_roc_lstm.png" width="30%" height=250 />
+   <img src="./images/ibm_roc_lstm.png" width="30%" height=250 />
+   <img src="./images/nasdaq_roc_lstm.png" width="30%" height=250 />
+</p>
+
+The confusion matrices offer deeper insights into the predictive behavior of our models on a more granular level. The model has shown a conservative behavior in market entry decisions for IBM - entering the market only 19 times, slightly less conservative for Amazon, and considerably aggressive for Nasdaq. 
+
+<p align="center">
+   <img src="./images/cm_amazon_lstm.png" width="30%" height=250 />
+   <img src="./images/cm_ibm_lstm.png" width="30%" height=250 />
+   <img src="./images/cm_nasdaq_lstm.png" width="30%" height=250 />
+</p>
+
+The more conservative strategy had for IBM paid off giving the best results.
+
 ### SVM
 
 The SVM model demonstrates a slight improvement over previously tested models, achieving consistent accuracy levels around 55% across various stocks, with the exception of IBM. This suggests a marginal but notable enhancement in the model's learning capability.
@@ -197,6 +221,8 @@ The confusion matrices offer deeper insights into the predictive behavior of our
    <img src="./images/cm_ibm_svm.png" width="30%" height=250 />
    <img src="./images/cm_microsoft_svm.png" width="30%" height=250 />
 </p>
+
+The model has opted for going long most of the time for Amazon and IBM, while instead has been bearish for Microsoft.
 
 ### Random forest
 
