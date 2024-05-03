@@ -161,7 +161,6 @@ but we should have expected this, given the unpredictability of the prediction e
    <img src="./images/CAC ARIMA Confusion Matrix.png" width = 400/> 
 </p>
 
-
 ### LSTM
 
 - The results reveal that the accuracy varies for the different indices and stocks across the three algorithms, with only the S&P 500 and Amazon showing roughly the same accuracy across SVM and LSTM (S&P 500), ARIMA and SVM (Amazon), respectively.
